@@ -1,6 +1,6 @@
 :root {
-    --primary: #b6895b;
-    --bg: #010101;
+    --primary: #ff2400;
+    --bg: #ffdd00;
   }
   
   * {
@@ -19,7 +19,7 @@
   body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg);
-    color: #fff;
+    color: #222;
   }
   
   /* Navbar */
@@ -28,8 +28,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.4rem 7%;
-    background-color: rgba(1, 1, 1, 0.8);
-    border-bottom: 1px solid #513c28;
+    background-color: rgba(255, 36, 0, 0.8);
+    border-bottom: 1px solid #ff2400;
     position: fixed;
     top: 0;
     left: 0;
@@ -45,7 +45,7 @@
   }
   
   .navbar .navbar-logo span {
-    color: var(--primary);
+    color: #ffdd00;
   }
   
   .navbar .navbar-nav a {
@@ -127,8 +127,8 @@
     height: 100vh;
     width: 35rem;
     padding: 0 1.5rem;
-    background-color: #fff;
-    color: var(--bg);
+    background-color: rgba(255, 36, 0, 0.8);;
+    color: #fff;
     transition: 0.3s;
   }
   
@@ -167,7 +167,7 @@
   }
   
   .shopping-cart .remove-item:hover {
-    color: var(--primary);
+    color: #ffdd00;
   }
   
   /* Hero Section */
@@ -301,44 +301,69 @@
     line-height: 1.6;
   }
   
-  /* Menu Section */
-  .menu h2,
-  .products h2,
-  .contact h2 {
-    margin-bottom: 1rem;
-  }
-  .menu p,
-  .products p,
-  .contact p {
+  /*menu*/
+  .menu p {
     text-align: center;
-    max-width: 30rem;
-    margin: auto;
-    font-weight: 100;
-    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
   }
   
   .menu .row {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 5rem;
     justify-content: center;
+    gap: 2rem;
   }
   
-  .menu .row .menu-card {
-    text-align: center;
-    padding-bottom: 4rem;
+  .menu-card {
+    background-color: #ff2400;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem 1.5rem;
+    width: 250px;
+    height: 350px; /* Bikin tinggi seragam */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.3s;
   }
   
-  .menu .row .menu-card img {
+  .menu-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .menu-card-img {
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    width: 80%;
+    object-fit: cover;
+    margin-bottom: 1rem;
   }
   
-  .menu .row .menu-card .menu-card-title {
-    margin: 1rem auto 0.5rem;
+  .menu-card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    margin: 1rem 0;
   }
   
+  .menu-card-price {
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+  }
+  
+
   /* Products Section */
+
+  .products p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
   .products .row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -348,7 +373,7 @@
   
   .products .product-card {
     text-align: center;
-    border: 1px solid #666;
+    border: 1px solid #fff;
     padding: 2rem;
   }
   
@@ -363,7 +388,7 @@
     height: 4rem;
     color: #fff;
     margin: 0.3rem;
-    border: 1px solid #666;
+    border: 1px solid #fff;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -412,7 +437,7 @@
   .contact .row {
     display: flex;
     margin-top: 2rem;
-    background-color: #222;
+    background-color: #ff2400;
   }
   
   .contact .row .map {
@@ -450,7 +475,7 @@
     padding: 1rem 3rem;
     font-size: 1.7rem;
     color: #fff;
-    background-color: var(--primary);
+    background-color: #ffdd00;
     cursor: pointer;
   }
   
@@ -505,7 +530,7 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(255, 36, 0, 0.8);
   }
   
   .modal-container {
@@ -514,7 +539,7 @@
     color: var(--bg);
     margin: 15% auto;
     padding: 1.2rem;
-    border: 1px solid #666;
+    border: 1px solid #fff;
     width: 80%;
     animation: animateModal 0.5s;
   }
@@ -585,7 +610,7 @@
       position: absolute;
       top: 100%;
       right: -100%;
-      background-color: #fff;
+      background-color: #ff2400;
       width: 30rem;
       height: 100vh;
       transition: 0.3s;
