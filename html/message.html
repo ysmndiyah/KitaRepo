@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="https://cdn.jsdelivr.net/gh/domyid/tracker@latest/index.js"></script>
+  <link rel="icon" type="image/png" href="/KitaRepo/image/faviconlogo _icon.ico.png">
+  <title>Form Kritik & Saran</title>
+  <!-- CSS khusus untuk halaman ini -->
+  <link rel="stylesheet" href="../css/mess.css">
+</head>
+<body>
+
+  <form onsubmit="sendToWhatsApp(); return false;">
+    <h2>Kritik dan Saran</h2>
+
+    <input type="text" id="nama" placeholder="Nama" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <textarea id="pesan" placeholder="Tulis kritik atau saran..." rows="4" required></textarea>
+
+    <button type="submit">Kirim ke WhatsApp</button>
+  </form>
+  <a href="../index.html" class="btn-back">← Kembali ke Beranda</a>
+
+
+  <!-- JS khusus untuk halaman ini -->
+  <script src="../js/mess.js"></script>
+</body>
+</html>
