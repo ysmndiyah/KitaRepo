@@ -1,70 +1,35 @@
-// Toggle class active untuk hamburger menu
-const navbarNav = document.querySelector ('.navbar-nav');
-// ketika hamburger menu di klik
-document.querySelector('#hamburger-menu').onclick = () => {
-navbarNav.classList.toggle('active');
-};
-
-// Toggle class active untuk search form
-const searchForm = document.querySelector('.search-form');
-const searchBox = document.querySelector('#search-box');
-
-document.querySelector('#search-button').onclick = (e) => {
-searchForm.classList.toggle('active');
-searchBox.focus();
-e.preventDefault();
-};
-
-// Toggle class active untuk shopping cart
-const shoppingCart = document.querySelector('.shopping-cart');
-document.querySelector('#shopping-cart-button').onclick = (e) => {
-shoppingCart.classList.toggle('active');
-e.preventDefault();
-};
-
-// Klik di luar elemen
-const hm = document.querySelector('#hamburger-menu');
-const sb = document.querySelector('#search-button');
-const sc = document.querySelector('#shopping-cart-button');
-
-document.addEventListener('click', function (e) {
-if (!hm.contains(e.target) && !navbarNav.contains(e.target)) {
-navbarNav.classList.remove('active');
-}
-
-if (!sb.contains(e.target) && !searchForm.contains(e.target)) {
-searchForm.classList.remove('active');
-}
-
-if (!sc.contains(e.target) && !shoppingCart.contains(e.target)) {
-shoppingCart.classList.remove('active');
-}
-});
-
-// Modal Box
-const itemDetailModal = document.querySelector('#item-detail-modal');
-const itemDetailButtons = document.querySelectorAll('.item-detail-button');
-
-itemDetailButtons.forEach((btn) => {
-btn.onclick = (e) => {
-itemDetailModal.style.display = 'flex';
-e.preventDefault();
-};
-});
-
-// klik tombol close modal
-document.querySelector('.modal .close-icon').onclick = (e) => {
-itemDetailModal.style.display = 'none';
-e.preventDefault();
-};
-
-// klik di luar modal
-window.onclick = (e) => {
-if (e.target === itemDetailModal) {
-itemDetailModal.style.display = 'none';
-}
-};
-
-
-
-
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const menuItems = document.querySelectorAll('.menu-item button');
+    const cartList = document.getElementById('cart-list');
+    const searchInput = document.getElementById('search');
+    const allMenus = document.querySelectorAll('.menu-item');
+    let cart = [];
+  
+    menuItems.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const name = item.querySelector('h3').innerText;
+        cart.push(name);
+        updateCart();
+      });
+    });
+  
+    function updateCart() {
+      cartList.innerHTML = '';
+      cart.forEach((item, index) => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        cartList.appendChild(li);
+      });
+    }
+  
+    searchInput.addEventListener('keyup', () => {
+      const keyword = searchInput.value.toLowerCase();
+      allMenus.forEach((item) => {
+        const name = item.querySelector('h3').innerText.toLowerCase();
+        item.style.display = name.includes(keyword) ? 'block' : 'none';
+      });
+    });
+  });
+  
