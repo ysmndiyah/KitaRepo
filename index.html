@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="module" src="https://cdn.jsdelivr.net/gh/domyid/tracker@latest/index.js"></script>
   <link rel="icon" type="image/png" href="image/faviconlogo _icon.ico.png">
-  <title>Nasi Goreng Bistik Sarimanah</title>
+  <title>Nasgor Bistik Sarimanah</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +26,7 @@
 
   <!-- Navbar start -->
   <nav class="navbar">
-    <a href="#" class="navbar-logo">Nasi Goreng<span>Bistik</span>Sarimanah</a>
+    <a href="#" class="navbar-logo">Nasgor<span> Bistik </span>Sarimanah</a>
 
     <div class="navbar-nav">
       <a href="#home">Home</a>
@@ -50,9 +50,9 @@
     <!-- Search Form end -->
 
     <!-- Shopping Cart start -->
-    <div class="shopping-cart">
+    <!--<div class="shopping-cart">
       <div class="cart-item">
-        <img src="img/products/1.jpg" alt="Product 1">
+        <img src="/image/bistik.jpg" alt="Product 1">
         <div class="item-detail">
           <h3>Product 1</h3>
           <div class="item-price">IDR 30K</div>
@@ -76,7 +76,7 @@
         <i data-feather="trash-2" class="remove-item"></i>
       </div>
     </div>
-    <!-- Shopping Cart end -->
+     Shopping Cart end -->
 
   </nav>
   <!-- Navbar end -->
@@ -87,9 +87,9 @@
       <main class="content">
         <h1 style="text-align: center;">
           Mau Makan Enak Gak Ribet?<br>
-          <span>Sini Coba yang Lagi Hype!</span>
+          <span>BistikIn Aja!</span>
         </h1>        
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, enim.</p>
+        <p>Nasgor Bistik Hadir dengan rasa yang bikin ngangenin.</p>
       </main>
     </div>
   </section>
@@ -97,49 +97,47 @@
 
   <!-- About Section start -->
   <section id="about" class="about">
-    <h2><span>Tentang</span> Kami</h2>
-
+    <h2>Tentang Kami</h2>
     <div class="row">
       <div class="about-img">
-        <img src="image/bistik.jpg" alt="Tentang Kami">
+        <img src="/image/bistik.jpg" alt="Tentang Kami">
       </div>
       <div class="content">
-        <h3>Kenapa harus Nasgor Bistik Sarimanah?</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ducimus voluptatum dolor. Et, voluptatum
-          accusantium!</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic deserunt iure amet facilis eos a quo cum
-          voluptates molestias nihil.</p>
+        <h3>Kami adalah Nasgor Bistik</h3>
+        <p>Nasi Goreng Bistik Sarimanah hadir dengan cita rasa rumahan, porsi melimpah, dan harga yang terjangkau untuk mahasiswa.</p>
+        <p>Kami siap menemani harimu dengan kelezatan yang bikin nagih!</p>
       </div>
     </div>
-  </section>
+  </section>  
   <!-- About Section end -->
 
   <!-- Menu Section start -->
   <section id="menu" class="menu">
     <h2><span>Menu</span> Kami</h2>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, repellendus numquam quam tempora voluptatum.
-    </p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, repellendus numquam quam tempora voluptatum.</p>
 
     <div class="menu-container">
-      <div class="menu-card">
-        <img src="image/bistik1.jpg" alt="Nasi Goreng Katsu" class="menu-card-img">
-        <h3 class="menu-card-title">Nasi Goreng Katsu</h3>
-        <p class="menu-card-price">Rp 15.000</p>
-      </div>
-      <div class="menu-card">
-        <img src="image/bistik2.jpg" alt="Nasi Goreng Bistik Ayam" class="menu-card-img">
-        <h3 class="menu-card-title">Nasi Goreng Bistik Ayam</h3>
-        <p class="menu-card-price">Rp 20.000</p>
-      </div>
-      <div class="menu-card">
-        <img src="image/bistik3.jpg" alt="Nasi Goreng Chicken Cordon Bleu" class="menu-card-img">
-        <h3 class="menu-card-title">Nasi Goreng Chicken Cordon Bleu</h3>
-        <p class="menu-card-price">Rp 25.000</p>
-      </div>
+        <div class="menu-card">
+            <img src="image/bistik1.jpg" alt="Nasi Goreng Katsu" class="menu-card-img">
+            <h3 class="menu-card-title">Nasi Goreng Katsu</h3>
+            <p class="menu-card-price">Rp 15.000</p>
+            <button class="btn-add-to-cart" onclick="addToCart(1, 'Nasi Goreng Katsu', 15000, 'image/bistik1.jpg')">Tambah ke Keranjang</button>
+        </div>
+        <div class="menu-card">
+            <img src="image/bistik2.jpg" alt="Nasi Goreng Bistik Ayam" class="menu-card-img">
+            <h3 class="menu-card-title">Nasi Goreng Bistik Ayam</h3>
+            <p class="menu-card-price">Rp 20.000</p>
+            <button class="btn-add-to-cart" onclick="addToCart(2, 'Nasi Goreng Bistik Ayam', 20000, 'image/bistik2.jpg')">Tambah ke Keranjang</button>
+        </div>
+        <div class="menu-card">
+            <img src="image/bistik3.jpg" alt="Nasi Goreng Chicken Cordon Bleu" class="menu-card-img">
+            <h3 class="menu-card-title">Nasi Goreng Chicken Cordon Bleu</h3>
+            <p class="menu-card-price">Rp 25.000</p>
+            <button class="btn-add-to-cart" onclick="addToCart(3, 'Nasi Goreng Chicken Cordon Bleu', 25000, 'image/bistik3.jpg')">Tambah ke Keranjang</button>
+        </div>
     </div>
-    
-    </div>
-  </section>
+</section>
+
   <!-- Menu Section end -->
 
   <!-- Products Section start -->
@@ -239,11 +237,11 @@
   <!-- Footer end -->
 
   <!-- Modal Box Item Detail start -->
-  <div class="modal" id="item-detail-modal">
+  <!--<div class="modal" id="item-detail-modal">
     <div class="modal-container">
       <a href="#" class="close-icon"><i data-feather="x"></i></a>
       <div class="modal-content">
-        <img src="img/products/1.jpg" alt="Product 1">
+        <img src="image/nasigorengbistik_sarimanah-removebg-preview.png" alt="Product 1">
         <div class="product-content">
           <h3>Product 1</h3>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident, tenetur cupiditate facilis obcaecati
@@ -261,7 +259,7 @@
       </div>
     </div>
   </div>
-  <!-- Modal Box Item Detail end -->
+   Modal Box Item Detail end -->
 
   <!-- Feather Icons -->
   <script>

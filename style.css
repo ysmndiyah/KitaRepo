@@ -1,6 +1,6 @@
 :root {
-    --primary: #ff4500;
-    --bg: #ffdd00;
+    --primary: #ea4c13;
+    --bg: #f0d10c;
   }
   
   * {
@@ -19,7 +19,7 @@
   body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg);
-    color: #fff;
+    color: #9d0909;
   }
   
   /* Navbar */
@@ -28,8 +28,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.4rem 7%;
-    background-color: rgba(255, 69, 0, 0.8);
-    border-bottom: 1px solid #ffdd00;
+    background-color: rgba(223, 92, 45, 0.8);
+    border-bottom: 1px solid #cec067;
     position: fixed;
     top: 0;
     left: 0;
@@ -73,7 +73,7 @@
   }
   
   .navbar .navbar-extra a {
-    color: #fff;
+    color: #ce2626;
     margin: 0 0.5rem;
   }
   
@@ -90,7 +90,7 @@
     position: absolute;
     top: 100%;
     right: 7%;
-    background-color: #fff;
+    background-color: #bc1010;
     width: 50rem;
     height: 5rem;
     display: flex;
@@ -283,15 +283,7 @@
   
   .about .row .about-img img {
     width: 100%;
-    -webkit-mask-image: url('../img/menu/splash.svg');
-    -webkit-mask-size: 50%;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: center;
   
-    mask-image: url('../img/menu/splash.svg');
-    mask-size: 50%;
-    mask-repeat: no-repeat;
-    mask-position: center;
   }
   
   

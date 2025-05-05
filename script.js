@@ -1,10 +1,10 @@
 document.addEventListener('alpine:init', () => {
     Alpine.data('Pesan', () => ({
         items: [
-            {id: 1, name: 'Americano Coffe', img: 'Menu.webp', price: 30000 },
-            {id: 2, name: 'ice latte', img: 'gambar 1.jpg', price: 60000 },
-            {id: 3, name: 'Americano dingin', img: 'menu menu/1.jpg', price: 70000 },
-            {id: 4, name: 'Americano Coffe', img: 'Menu.webp', price: 45000 },
+            {id: 1, name: 'Nasi Goreng Katsu', image: 'image/bistik1.jpg', price: 15000 },
+            {id: 2, name: 'Nasi Goreng Bistik Ayam', image: 'image/bistik2.jpg', price: 20000 },
+            {id: 3, name: 'Nasi Goreng Chicken Cordon Bleu', image: 'image/bistik3.jpg', price: 25000 }
+
         ],
 
     }));
