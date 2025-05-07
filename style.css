@@ -372,7 +372,7 @@
   .menu-card-title {
     font-size: 1.5rem;
     margin: 1rem 0 0.5rem;
-    color: #333;
+    color: #eee;
   }
   
   .menu-card-price {
@@ -381,6 +381,38 @@
     color: #eee;
     font-weight: bold;
   }
+  
+  .btn-keranjang {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background-color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .icon-keranjang {
+    width: 20px;
+    height: 20px;
+  }
+  .btn-keranjang {
+    display: flex;
+    align-items: center;       /* Sejajarkan vertikal (ikon & teks) */
+    justify-content: center;   /* Ratai isi ke tengah tombol */
+    gap: 8px;
+    padding: 10px 15px;
+    background-color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
   
   /* Products Section */
   .products .row {
