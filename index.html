@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="module" src="https://cdn.jsdelivr.net/gh/domyid/tracker@latest/index.js"></script>
-  <link rel="icon" type="image/png" href="image/faviconlogo _icon.ico.png">
-  <title>Nasgor Bistik Sarimanah</title>
+  <link rel="icon" type="image/png" href="image/ice-cube.png">
+  <title>Marine Ice Jaya</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +26,7 @@
 
   <!-- Navbar start -->
   <nav class="navbar">
-    <a href="#" class="navbar-logo">Nasgor<span> Bistik </span>Sarimanah</a>
+    <a href="#" class="navbar-logo">M<span> i </span>j</a>
 
     <div class="navbar-nav">
       <a href="#home">Home</a>
@@ -83,16 +83,16 @@
 
   <!-- Hero Section start -->
   <section class="hero" id="home">
-    <div class="mask-container">
+    <div id="slider" class="mask-container">
       <main class="content">
-        <h1 style="text-align: center;">
-          Mau Makan Enak Gak Ribet?<br>
-          <span>BistikIn Aja!</span>
-        </h1>        
-        <p>Nasgor Bistik Hadir dengan rasa yang bikin ngangenin.</p>
+        <h1 style="text-align: center;">Solusi Ikan Fresh?<br><span>MijIn Aja!</span></h1>        
+        <p>CV Mij Hadir Untuk ikan segarmu.</p>
       </main>
     </div>
+    
   </section>
+  
+  
   <!-- Hero Section end -->
 
   <!-- About Section start -->
@@ -206,7 +206,7 @@
     </p>
 
     <div class="row">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7922.231362804687!2d107.575773!3d-6.8767413!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e75c5cb9b859%3A0x40b1858102c9dde9!2sNasi%20Goreng%20Bistik%20Sarimanah!5e0!3m2!1sen!2sid!4v1746345813946!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3947.348474586787!2d113.46191387516781!3d-8.367339784345141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd681007771f72f%3A0x361d0ff7d4965d23!2sPT.%20MARINE%20ICE%20INDO%20JAYA!5e0!3m2!1sid!2sid!4v1746961192936!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         <form action="">
             <div class="input-group">
@@ -274,6 +274,29 @@
   <script>
     feather.replace()
   </script>
+
+<script>
+  const images = [
+  'image/es balok1.jpg',
+  'image/es balok2.jpg',
+  'image/es balok3.jpg'
+];
+
+
+  let currentIndex = 0;
+  const slider = document.getElementById('slider');
+
+  function changeBackground() {
+    slider.style.backgroundImage = `url('${images[currentIndex]}')`;
+    currentIndex = (currentIndex + 1) % images.length;
+  }
+
+  // Ganti gambar pertama kali
+  changeBackground();
+
+  // Ganti gambar setiap 3 detik
+  setInterval(changeBackground, 3000);
+</script>
 
   <!-- My Javascript -->
   <script src="script.js"></script>

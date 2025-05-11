@@ -1,6 +1,6 @@
 :root {
-    --primary: #ea4c13;
-    --bg: #f0d10c;
+    --primary: grey;
+    --bg: #2F5597;
   }
   
   * {
@@ -28,7 +28,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.4rem 7%;
-    background-color: rgba(223, 92, 45, 0.8);
+    background-color: rgba(128, 128, 128, 1);
     border-bottom: 1px solid #cec067;
     position: fixed;
     top: 0;
@@ -349,7 +349,7 @@
   }
   
   .menu-card {
-    background: #ff4500;
+    background: grey;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -426,7 +426,7 @@
     text-align: center;
     padding: 1.2rem;
     border-radius: 1rem;
-    background-color: #ff4500;
+    background-color: grey;
     border: none;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -468,7 +468,7 @@
   }
   
   .products .product-icons a:hover {
-    background-color: #e65c00;
+    background-color: grey;
   }
   
   .products .product-image {
@@ -518,7 +518,7 @@
   .contact .row {
     display: flex;
     margin-top: 2rem;
-    background-color: #ff4500;
+    background-color: grey;
   }
   
   .contact .row .map {
@@ -772,3 +772,43 @@
       font-size: 55%;
     }
   }
+
+  .mask-container {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+  .transparent-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* memastikan gambar menutupi area */
+    z-index: 0;
+    opacity: 0.6; /* atur transparansi sesuai selera */
+  }
+  
+  .content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 100px 20px;
+    color: #fff; /* Pastikan teks terlihat di atas gambar */
+  }
+  
+  #slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out; /* Menambahkan transisi untuk perubahan background */
+  }
+  
+  
+  
+  

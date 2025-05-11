@@ -66,7 +66,6 @@ document.addEventListener('alpine:init', () => {
     });
 });
 
-
 //rupiah
 const rupiah = (number) => {
     return new Intl.NumberFormat('id-ID', {
@@ -75,4 +74,6 @@ const rupiah = (number) => {
         minimumFractionDigits: 0,
     }).format(number);
 };
+
+
 
