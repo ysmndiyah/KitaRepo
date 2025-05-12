@@ -305,114 +305,33 @@
   }
   
   /* Menu Section */
-  .menu h2,
-  .products h2,
-  .contact h2 {
-    margin-bottom: 1rem;
-  }
-  .menu p,
-  .products p,
-  .contact p {
-    text-align: center;
-    max-width: 30rem;
-    margin: auto;
-    font-weight: 100;
-    line-height: 1.6;
-  }
-  
-  .menu .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 5rem;
-    justify-content: center;
-  }
-  
-  .menu .row .menu-card {
-    text-align: center;
-    padding-bottom: 4rem;
-  }
-  
-  .menu .row .menu-card img {
-    border-radius: 50%;
-    width: 80%;
-  }
-  
-  .menu .row .menu-card .menu-card-title {
-    margin: 1rem auto 0.5rem;
-  }
-  .menu-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 2rem;
-  }
-  
-  .menu-card {
-    background: grey;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    width: 250px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .menu-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-  }
-  
-  .menu-card-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .menu-card-title {
-    font-size: 1.5rem;
-    margin: 1rem 0 0.5rem;
-    color: #eee;
-  }
-  
-  .menu-card-price {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: #eee;
-    font-weight: bold;
-  }
-  
-  .btn-keranjang {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 15px;
-    background-color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 14px;
-  }
-  
-  .icon-keranjang {
-    width: 20px;
-    height: 20px;
-  }
-  .btn-keranjang {
-    display: flex;
-    align-items: center;       /* Sejajarkan vertikal (ikon & teks) */
-    justify-content: center;   /* Ratai isi ke tengah tombol */
-    gap: 8px;
-    padding: 10px 15px;
-    background-color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 14px;
-  }
-  
+.menu-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.menu-card {
+  width: 200px;
+  height: 200px;
+  background-color: #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.menu-card:hover {
+  transform: scale(1.05);
+}
+
+.menu-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
   
   /* Products Section */
   .products .row {
