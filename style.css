@@ -19,7 +19,7 @@
   body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg);
-    color: #9d0909;
+    color: #eee;
   }
   
   /* Navbar */
@@ -28,8 +28,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.4rem 7%;
-    background-color: rgba(128, 128, 128, 1);
-    border-bottom: 1px solid #cec067;
+    background-color: rgba(128, 128, 128, 0.8);
+    border-bottom: 1px solid grey;
     position: fixed;
     top: 0;
     left: 0;
@@ -73,7 +73,7 @@
   }
   
   .navbar .navbar-extra a {
-    color: #ce2626;
+    color: #eee;
     margin: 0 0.5rem;
   }
   
@@ -270,9 +270,9 @@
   .menu h2 span,
   .products h2 span,
   .contact h2 span {
-    color: var(--primary);
+    color: #eee;
   }
-  
+
   .about .row {
     display: flex;
   }
@@ -282,11 +282,17 @@
   }
   
   .about .row .about-img img {
-    width: 100%;
-  
-  }
-  
-  
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.about .row .about-img img:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
   .about .row .content {
     flex: 1 1 35rem;
     padding: 0 1rem;
@@ -313,7 +319,7 @@
 }
 
 .menu-card {
-  width: 200px;
+  width: 100px;
   height: 200px;
   background-color: #ddd;
   border-radius: 20px;
@@ -321,6 +327,14 @@
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   transition: transform 0.3s;
 }
+
+.menu-card {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  aspect-ratio: 1/1; /* kotak */
+}
+
 
 .menu-card:hover {
   transform: scale(1.05);
@@ -334,14 +348,14 @@
 
   
   /* Products Section */
-  .products .row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    gap: 1.5rem;
-    margin-top: 4rem;
-  }
-  
-  .products .product-card {
+ .products .row {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.products .product-card {
+  width: 40rem; /* kamu bisa atur ukurannya di sini */
     text-align: center;
     padding: 1.2rem;
     border-radius: 1rem;
