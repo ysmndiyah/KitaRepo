@@ -1,5 +1,5 @@
 :root {
-    --primary: grey;
+    --primary: #f39c12;
     --bg: #2F5597;
   }
   
@@ -196,8 +196,6 @@
   
   .hero .mask-container {
     position: absolute;
-    /* background: salmon; */
-    position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
@@ -250,65 +248,64 @@
   }
   
   /* About Section */
-  .about,
-  .menu,
-  .products,
-  .contact {
+  .about {
     padding: 8rem 7% 1.4rem;
   }
   
-  .about h2,
-  .menu h2,
-  .products h2,
-  .contact h2 {
+  .about h2 {
     text-align: center;
     font-size: 2.6rem;
     margin-bottom: 3rem;
   }
   
-  .about h2 span,
-  .menu h2 span,
-  .products h2 span,
-  .contact h2 span {
+  .about h2 span {
     color: #eee;
   }
-
+  
   .about .row {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
   }
   
-  .about .row .about-img {
+  .about .about-img {
     flex: 1 1 45rem;
+    text-align: center;
   }
   
-  .about .row .about-img img {
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.about .row .about-img img:hover {
-  transform: scale(1.1) rotate(5deg);
-}
-
-  .about .row .content {
-    flex: 1 1 35rem;
-    padding: 0 1rem;
+  .about .about-img img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 20px; /* Sudut sedikit membulat */
+    object-fit: cover;
+    transition: transform 0.3s ease;
   }
   
-  .about .row .content h3 {
+  
+  .about .about-img img:hover {
+    transform: scale(1.05) rotate(2deg);
+  }
+  
+  .about .content {
+    flex: 1 1 45rem;
+    padding: 0;
+  }
+  
+  .about .content h3 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
   }
   
-  .about .row .content p {
+  .about .content p {
     margin-bottom: 0.8rem;
     font-size: 1.3rem;
     font-weight: 100;
     line-height: 1.6;
   }
+  
   
   /* Menu Section */
 .menu-container {
@@ -319,33 +316,31 @@
 }
 
 .menu-card {
-  width: 100px;
-  height: 200px;
+  width: 250px;
+  max-width: 400px;
+  height: auto;
+  padding: 1rem;/* beri padding supaya gambar gak nempel */
   background-color: #ddd;
-  border-radius: 20px;
+  border-radius: 30px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   transition: transform 0.3s;
-}
-
-.menu-card {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  aspect-ratio: 1/1; /* kotak */
-}
-
-
-.menu-card:hover {
-  transform: scale(1.05);
+  aspect-ratio: 1/1; 
 }
 
 .menu-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 20px;
 }
 
+
+
+
+.menu-card:hover {
+  transform: scale(1.05);
+}
   
   /* Products Section */
  .products .row {
@@ -408,15 +403,18 @@
     padding: 1rem 0;
     overflow: hidden;
   }
+
   .products .product-image img {
     height: 15rem;
     border-radius: 0.8rem;
     object-fit: cover;
     transition: transform 0.3s ease;
   }
-  products .product-card:hover .product-image img {
+
+  .products .product-card:hover .product-image img {
     transform: scale(1.05);
   }
+  
   .products .product-content h3 {
     font-size: 1.4rem;
     margin: 0.8rem 0 0.5rem;
@@ -554,7 +552,8 @@
     margin: 15% auto;
     padding: 1.2rem;
     border: 1px solid #666;
-    width: 80%;
+    width: 90%;
+    max-width: 700px;
     animation: animateModal 0.5s;
   }
   
@@ -741,6 +740,23 @@
     background-position: center;
     transition: background-image 1s ease-in-out; /* Menambahkan transisi untuk perubahan background */
   }
+
+  /* Heading section */
+section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #333;
+}
+
+section h2 span {
+  color: var(--primary); /* pastikan --primary sudah kamu set sebelumnya */
+  font-weight: bold;
+}
+
+
   
   
   
