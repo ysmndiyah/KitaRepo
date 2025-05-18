@@ -276,8 +276,8 @@
   }
   
   .about .about-img img {
-    width: 100%;
-    max-width: 400px;
+    width: 300%;
+    max-width: 300px;
     height: auto;
     border-radius: 20px; /* Sudut sedikit membulat */
     object-fit: cover;
@@ -316,31 +316,42 @@
 }
 
 .menu-card {
-  width: 250px;
-  max-width: 400px;
-  height: auto;
-  padding: 1rem;/* beri padding supaya gambar gak nempel */
+  width: 100px;
+  height: 200px;
   background-color: #ddd;
-  border-radius: 30px;
+  border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   transition: transform 0.3s;
-  aspect-ratio: 1/1; 
+}
+
+.menu-card {
+  width: 500px;
+  max-width: 90%;
+  height: auto;
+  aspect-ratio: 1/1; /* kotak */
+}
+
+
+.menu-card:hover {
+  transform: scale(1.05);
 }
 
 .menu-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 20px;
 }
 
-
-
-
-.menu-card:hover {
-  transform: scale(1.05);
+.team {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white; /* Kalau background kamu gelap */
+  padding: 40px 20px;
 }
+
   
   /* Products Section */
  .products .row {
@@ -444,6 +455,18 @@
     color: #fff;
     margin-left: 0.3rem;
   }
+
+  .products {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.products .product-content {
+  text-align: center;
+}
+
   
   /* Contact Section */
   .contact .row {
@@ -530,6 +553,32 @@
     color: var(--bg);
     font-weight: 700;
   }
+
+  .contact {
+  text-align: center;
+}
+
+.contact .row {
+  justify-content: center; /* agar map dan form sejajar di tengah */
+  align-items: center;
+  flex-wrap: wrap; /* biar responsif kalau layar kecil */
+}
+
+.contact .row form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact .row form .input-group {
+  width: 80%; /* biar tidak kepanjangan */
+  max-width: 500px;
+}
+
+.contact .row form .btn {
+  width: fit-content;
+}
+
   
   /* Modal Box */
   /* Item Detail */
