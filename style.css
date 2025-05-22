@@ -118,6 +118,25 @@
     margin-right: 1.5rem;
     color: var(--bg);
   }
+
+  /* logo */
+  .navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white; /* sesuaikan dengan warna tema */
+  text-decoration: none;
+}
+
+.logo-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+/*logo end*/
   
   /* Shopping Cart */
   .shopping-cart {
@@ -308,30 +327,26 @@
   
   
   /* Menu Section */
+/* Kontainer Menu */
 .menu-container {
   display: flex;
-  gap: 20px;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
 }
 
-.menu-card {
-  width: 100px;
-  height: 200px;
-  background-color: #ddd;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: transform 0.3s;
-}
-
+/* Kartu Menu */
 .menu-card {
   width: 500px;
   max-width: 90%;
-  height: auto;
-  aspect-ratio: 1/1; /* kotak */
+  aspect-ratio: 1 / 1; /* Kotak */
+  background-color: #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
 }
-
 
 .menu-card:hover {
   transform: scale(1.05);
@@ -343,13 +358,27 @@
   object-fit: cover;
 }
 
+/* Bagian Tim */
 .team {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white; /* Kalau background kamu gelap */
+  color: white; /* Sesuaikan dengan background */
   padding: 40px 20px;
+}
+
+/* Media Query: Responsif untuk layar kecil */
+@media (max-width: 600px) {
+  .menu-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .team {
+    padding: 20px 10px;
+    font-size: 0.95em;
+  }
 }
 
   
@@ -469,51 +498,79 @@
 
   
   /* Contact Section */
+ .contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  background-color: grey;
+  border-radius: 20px;
+  overflow: hidden;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.contact .row iframe {
+  flex: 1 1 45rem;
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 20px;
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 2rem;
+  text-align: center;
+  background-color: #333;
+  border-radius: 20px;
+}
+
+.contact .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: var(--bg, #444);
+  border: 1px solid #eee;
+  padding-left: 2rem;
+  border-radius: 10px;
+}
+
+.contact .row form .input-group input {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  background: none;
+  color: #fff;
+  border: none;
+  outline: none;
+}
+
+.contact .row form .btn {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.6rem;
+  color: #fff;
+  background-color: var(--bg, #555);
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
   .contact .row {
-    display: flex;
-    margin-top: 2rem;
-    background-color: grey;
+    flex-direction: column;
   }
-  
-  .contact .row .map {
-    flex: 1 1 45rem;
-    width: 100%;
-    object-fit: cover;
+
+  .contact .row iframe {
+    height: 250px;
   }
-  
+
   .contact .row form {
-    flex: 1 1 45rem;
-    padding: 5rem 2rem;
-    text-align: center;
+    padding: 1rem;
   }
-  
-  .contact .row form .input-group {
-    display: flex;
-    align-items: center;
-    margin-top: 2rem;
-    background-color: var(--bg);
-    border: 1px solid #eee;
-    padding-left: 2rem;
-  }
-  
-  .contact .row form .input-group input {
-    width: 100%;
-    padding: 2rem;
-    font-size: 1.7rem;
-    background: none;
-    color: #fff;
-  }
-  
-  .contact .row form .btn {
-    margin-top: 3rem;
-    display: inline-block;
-    padding: 1rem 3rem;
-    font-size: 1.7rem;
-    color: #fff;
-    background-color: var(--bg);
-    cursor: pointer;
-  }
-  
+}
+
   /* Footer */
   footer {
     background-color: var(--primary);
