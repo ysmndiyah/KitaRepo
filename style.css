@@ -1,5 +1,5 @@
 :root {
-    --primary: #f39c12;
+    --primary: #e0a039;
     --bg: #2F5597;
   }
   
@@ -295,7 +295,7 @@
   }
   
   .about .about-img img {
-    width: 300%;
+    width: 100%;
     max-width: 300px;
     height: auto;
     border-radius: 20px; /* Sudut sedikit membulat */
@@ -529,7 +529,7 @@
   display: flex;
   align-items: center;
   margin-top: 2rem;
-  background-color: var(--bg, #444);
+  background-color: var(--bg, #FFF);
   border: 1px solid #eee;
   padding-left: 2rem;
   border-radius: 10px;
@@ -645,10 +645,11 @@
     z-index: 9999;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.7);
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
   }
   
   .modal-container {
@@ -681,9 +682,24 @@
   }
   
   .modal-content {
-    display: flex;
-    flex-wrap: nowrap;
+    background: #fff;
+    color: var(--bg);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
   }
+
+  .modal .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+  }
+  
   
   .modal-content img {
     height: 20rem;
@@ -716,7 +732,7 @@
   }
   
   /* Tablet */
-  @media (max-width: 758px) {
+  @media (max-width: 768px) {
     html {
       font-size: 62.5%;
     }
@@ -725,14 +741,19 @@
       display: inline-block;
     }
   
+   
+    
     .navbar .navbar-nav {
       position: absolute;
       top: 100%;
       right: -100%;
       background-color: #fff;
-      width: 30rem;
+      width: 100%;
       height: 100vh;
-      transition: 0.3s;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: right 0.3s ease-in-out;
     }
   
     .navbar .navbar-nav.active {
@@ -862,6 +883,47 @@ section h2 span {
   font-weight: bold;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 80px;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.modal-content {
+  background-color: white;
+  margin: auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+.close-button {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Rasio 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px; /* opsional untuk membulatkan sudut */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* opsional efek bayangan */
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 
   
   

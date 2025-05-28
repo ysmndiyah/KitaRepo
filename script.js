@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.item-detail-button').forEach((btn) => {
     btn.onclick = (e) => {
       e.preventDefault();
-      alert('Detail produk belum tersedia.');
+      alert('Es Balok dengan keunggulan prima tersedia pembelian per-Kg');
     };
   });
 
@@ -48,3 +48,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+
