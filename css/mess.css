@@ -6,7 +6,7 @@
   }
   
   body {
-    background-color: #ffdd00;
+    background-color: #819A91;
     color: #f1f1f1;
     padding: 2rem;
     display: flex;
@@ -16,7 +16,7 @@
   }
   
   form {
-    background-color: #ffdd00;
+    background-color: #819A91;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 0 15px rgba(0,0,0,0.5);
@@ -49,17 +49,20 @@
   
   button,
   .btn-back {
-    width: 100%;
-    padding: 0.8rem;
+    background-color: #444;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
     border: none;
     border-radius: 8px;
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
     text-align: center;
-    display: block;
+    display: inline-block;
     margin-top: 1rem;
   }
+  
   
   button {
     background-color: #00a86b;
@@ -114,4 +117,45 @@
     animation: fadeIn 0.6s ease forwards;
     opacity: 0;
   }
+
+  .wa-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin-top: 20px;
+  }
+  
+  .wa-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .wa-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #25d366;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .wa-button:hover {
+    background-color: #1ebc57;
+  }
+  
+  .wa-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
   

@@ -11,14 +11,16 @@
 </head>
 <body>
 
-  <form onsubmit="sendToWhatsApp(); return false;">
-    <h2>Kritik dan Saran</h2>
-
-    <input type="text" id="nama" placeholder="Nama" required>
-    <textarea id="pesan" placeholder="Tulis kritik atau saran..." rows="4" required></textarea>
-
-    <button type="submit">Kirim ke WhatsApp</button>
+  <form onsubmit="event.preventDefault(); sendToWhatsApp();" class="wa-form">
+    <input type="text" id="nama" placeholder="Nama Anda" required />
+    <input type="number" id="jumlah" placeholder="Jumlah (Kg)" min="1" required />
+    
+    <button type="submit" class="wa-button">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="wa-icon" />
+      Kirim via WhatsApp
+    </button>
   </form>
+  
   <a href="../index.html" class="btn-back">← Kembali ke Beranda</a>
 
 
