@@ -616,24 +616,59 @@
 }
 
 .contact .row {
-  justify-content: center; /* agar map dan form sejajar di tengah */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap; /* biar responsif kalau layar kecil */
+  gap: 2rem;
+  padding: 2rem;
+  margin-top: 2rem;
+  background-color: grey;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.contact .row input,
+.contact .row textarea {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
 }
 
 .contact .row form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 1rem;
+  background-color: #333;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 400px;
+  color: white;
 }
 
 .contact .row form .input-group {
-  width: 80%; /* biar tidak kepanjangan */
-  max-width: 500px;
+  background-color: #444; /* warna abu gelap */
 }
+
+.contact .row form .input-group input {
+  background: transparent;
+  color: #fff;
+}
+
 
 .contact .row form .btn {
   width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact .row button {
+  background-color: royalblue;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
 }
 
   
@@ -741,8 +776,15 @@
       display: inline-block;
     }
   
-   
-    
+    @media (max-width: 500px) {
+  .contact .row form .input-group {
+    width: 100%;
+  }
+
+  .contact .row iframe {
+    height: 200px;
+  }
+}    
     .navbar .navbar-nav {
       position: absolute;
       top: 100%;
