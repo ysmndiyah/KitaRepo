@@ -12,7 +12,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet" /> 
 
   <!-- Feather Icons -->
   <script src="https://unpkg.com/feather-icons"></script>
@@ -117,30 +117,42 @@
   </section>
   <!-- Products Section end -->
 
-  <!-- Contact Section start -->
+ <!-- Contact Section start -->
 <section id="contact" class="contact">
   <h2><span>Kontak</span> Kami</h2>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, provident.</p>
-  
-  <div class="row">
-    <!-- MAP -->
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3947.348474586787!2d113.46191387516781!3d-8.367339784345141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd681007771f72f%3A0x361d0ff7d4965d23!2sPT.%20MARINE%20ICE%20INDO%20JAYA!5e0!3m2!1sid!2sid!4v1746961192936!5m2!1sid!2sid"
-      width="600"
-      height="450"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
 
-    <!-- FORM -->
-    <div>
-  <a href="html/message.html" class="btn">Kirim Pesan</a>
-</div>
+  <div class="row" style="
+    max-width: 450px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  ">
+
+    <!-- MAP -->
+    <div style="max-width: 400px; width: 100%; margin: auto;">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3947.348474586787!2d113.46191387516781!3d-8.367339784345141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd681007771f72f%3A0x361d0ff7d4965d23!2sPT.%20MARINE%20ICE%20INDO%20JAYA!5e0!3m2!1sid!2sid!4v1746961192936!5m2!1sid!2sid"
+        width="100%"
+        height="220"
+        style="border:0; border-radius: 10px; display: block;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <!-- TOMBOL -->
+    <a href="html/message.html" 
+       class="btn" 
+       style="padding: 10px 20px; background-color: #2F5597; color: white; border-radius: 5px; text-decoration: none; margin-top: 20px;">
+      Kirim Pesan
+    </a>
+
+  </div>
 </section>
 <!-- Contact Section end -->
-
 <!-- Footer start -->
 <footer>
   <div class="socials">
