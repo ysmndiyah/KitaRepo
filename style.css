@@ -464,11 +464,11 @@
   .products .product-stars {
     font-size: 1.4rem;
     padding: 0.3rem 0;
-    color: var(--primary);
+    color: gold;
   }
   
   .products .product-stars .star-full {
-    fill: var(--primary);
+    fill: gold;
   }
   
   .products .product-price {
@@ -498,6 +498,22 @@
 
   
   /* Contact Section */
+  .contact {
+  padding: 80px 20px 40px; /* atas kanan-kiri bawah */
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+
  .contact .row {
   display: flex;
   flex-wrap: wrap;
