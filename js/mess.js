@@ -5,18 +5,18 @@ document.addEventListener('DOMContentLoaded', function () {
     e.preventDefault();
 
     const nama = document.getElementById('nama').value.trim();
-    const jumlah = document.getElementById('jumlah').value.trim();
-    const nomorTujuan = '6281297765879';
+    const pesan = document.getElementById('pesan').value.trim();
+    const nomorTujuan = '6281211437153';
 
-    if (!nama || !jumlah) {
+    if (!nama || !pesan) {
       alert("Silakan isi semua data terlebih dahulu.");
       return;
     }
 
-    const pesan = `🧊 Pemesanan Produk MIJ:\n\nNama: ${nama}\nJumlah Pesanan: ${jumlah} Kg`;
-    const encodedPesan = encodeURIComponent(pesan);
+    const message = `Pemesanan Produk MIJ:\n\nNama: ${nama}\nPesan: ${pesan}`;
+    const encodedPesan = encodeURIComponent(message);
     const linkWA = `https://wa.me/${nomorTujuan}?text=${encodedPesan}`;
 
-    window.open(linkWA, '_blank'); // Atau: window.location.href = linkWA;
+    window.open(linkWA, '_blank');
   });
 });

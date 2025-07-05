@@ -13,7 +13,8 @@
 
   <form onsubmit="event.preventDefault(); sendToWhatsApp();" class="wa-form">
     <input type="text" id="nama" placeholder="Nama Anda" required />
-    <input type="number" id="jumlah" placeholder="Jumlah (Kg)" min="1" required />
+    <textarea id="pesan" placeholder="Pesan Anda" name="pesan" rows="4" required></textarea>
+
     
     <button type="submit" class="wa-button">
       <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="wa-icon" />

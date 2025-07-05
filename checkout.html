@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout Es Balok</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="contact">
+    <h2><span>Form</span> Checkout</h2>
+    <p>Silakan isi data berikut untuk memesan Es Balok.</p>
+
+    <div class="row">
+      <form action="kirim_pesanan.php" method="POST">
+        <input type="hidden" name="produk" value="Es Balok" />
+
+        <div class="input-group">
+          <input type="text" name="nama" placeholder="Nama Anda" required />
+        </div>
+
+        <div class="input-group">
+          <input type="text" name="alamat" placeholder="Alamat Lengkap" required />
+        </div>
+
+        <div class="input-group">
+          <input type="number" name="jumlah" placeholder="Jumlah (Kg)" required />
+        </div>
+
+        <div class="input-group">
+          <input type="text" name="no_hp" placeholder="Nomor WhatsApp" required />
+        </div>
+
+        <button type="submit" class="btn">Kirim Pesanan</button>
+      </form>
+    </div>
+  </section>
+</body>
+</html>
